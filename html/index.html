@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>메인블로그</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+        <!--<i class='bx bxl-c-plus-plus icon'></i>-->
+        <div class="rightbar">
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+         
+           <div class="profileimage"> 
+             <img src="/image/123.jpg">
+           </div>
+           <div class="blognickname">
+            KBK.
+           </div>
+           <div class="blogname">
+            김배권
+           </div>
+        </div>
+    <div class="nav-list">
+                   <div>
+                   <li>
+                      <i class='bx bx-search' ></i>
+                      <input type="text" placeholder="Search...">
+                      <span class="tooltip">검색</span>
+                   </li>
+                  </div>
+                  <div id="catelist">
+                   <li>
+                     <a href="#" class="cate-btn">
+                      <!-- <i class='bx bx-category' ></i> -->
+                       <span class="links_name">전체 글</span>
+                       <span class="fas fa-caret-down first"></span>
+                     </a>
+    
+                     <ul class="cate-show">
+                        <li><a href="#">컴퓨터<i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
+                        <li><a href="#">코딩<i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
+                        <li><a href="#">웹<i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
+                        <li><a href="#">프로젝트<i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>
+                        <li><a href="#">언어<i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a></li>              
+                     </ul>
+                     <span class="tooltip">카테고리</span>
+                   </li>
+                  </div> 
+                  <div class="blogmenu">
+                   <li>
+                 
+                        <!-- <i class='bx bxs-food-menu'></i> -->
+    
+                        <span class="links_name">블로그 메뉴 </span>
+                        <a href="#" class="">
+                        <li>
+                          <i class="fa-brands fa-github">&nbsp;&nbsp;github(깃허브)</i>
+                        </li>   
+                        </a>
+                     
+                        <li>
+                          <a href="#" class="">
+                          <i class="fa-solid fa-people-group">&nbsp;&nbsp;방명록</i>
+                        </a>
+                        </li>
+                    
+                    
+                  </li>
+                 </div> 
+                
+                <div class="blogmenu">
+                  <li>
+                
+                       <!-- <i class='bx bxs-food-menu'></i> -->
+   
+                       <span class="links_name">공지사항 </span>
+                       <a href="#" class="">
+                       <li>
+                        <i class='bx bx-bell'>&nbsp;&nbsp;공지공지</i>
+                       </li>   
+                       </a>
+                    
+                       <li>
+                         <a href="#" class="">
+                          <i class='bx bx-bell'>&nbsp;&nbsp;안내사항</i>
+                       </a>
+                       </li>
+                   
+                   
+                 </li>
+                </div> 
+                <div class="blogmenu">
+                  <li>
+                
+                       <!-- <i class='bx bxs-food-menu'></i> -->
+   
+                       <span class="links_name">인기글 </span>
+                       <a href="#" class="">
+                       <li>
+                        javascript    <img src="/image/123.jpg">
+                       </li>
+                    
+                       </a>
+                    
+                       <li>
+                        <a href="#" class="">
+                       Html    <img src="/image/123.jpg">
+                      </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="">
+                       CSS    <img src="/image/123.jpg">
+                      </a>
+                      </li>
+                      
+                   
+                 </li>
+                </div> 
+                <div class="blogmenu">
+                  <li>
+                
+                       <!-- <i class='bx bxs-food-menu'></i> -->
+   
+                       <span class="links_name">최신글 </span>
+                       <a href="#" class="">
+                       <li>
+                        javascript    <img src="/image/123.jpg">
+                       </li>
+                    
+                       </a>
+                    
+                       <li>
+                        <a href="#" class="">
+                       Html    <img src="/image/123.jpg">
+                      </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="">
+                       CSS    <img src="/image/123.jpg">
+                      </a>
+                      </li>
+                      
+                   
+                 </li>
+                </div> 
+
+                 <div>
+                  <li>
+                  <a href="#">
+                  <i class='bx bx-cog' ></i>
+                  <span class="links_name">&nbsp;설정</span>
+                  </a>
+                  <span class="tooltip">설정</span>
+                  </li>
+                </div>
+                <div id="come_in">
+                  Today:100
+                  Yesterday:200
+                  Total:9999
+                </div>
+                <div id="btm_design">
+                  Design by kbk.
+                  Don't dwell on the past.
+                </div>
+         </div>        
+</div>
+
+
+
+
+
+
+<section class="home-section">
+    <main id="main">   
+        <div class="in_header">
+            <div class="logo">
+                <!--<a href="#"><img src="./KBK.png" alt="내가만든 로고"> -->
+                <h1 class="title-text">KBK</h1>
+                </a>
+            </div>
+         
+            <button id="back-btn"><img src="/image/123.jpg"></button>
+            <div class="btn_search">
+              <div class="area_search">  
+                  <div class="icon">
+                  <i class="search fa fa-search"></i>
+              </div>
+              <div class="input">
+                  <input type="text" placeholder="Search" id="search">
+                  <i class="clear fa fa-times"></i>   
+              </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="in_index">
+          
+            
+            <aside id="aisdeLeft">             
+            </aside>
+            <div id="section">
+                <div id="title">
+                  최신글
+                </div>
+                  <div class="list">
+                    <div class="post">
+                      <a href="#" class="thumbnail">
+                        <img src="/image/123.jpg" style="width: 200px; height: 200px;">
+                      </a>
+                      <div class="description">
+                        <a href="#">코딩</a>
+                        <h2>
+                          <a href="#" class="title-sum">어떤 사람이 코딩을 잘할까?</a>
+                        </h2>
+                        <time class="clock">
+                          2000.05.01
+                        </time>
+                        <p class="content-sum">
+                          프로그래머가 하는 일은 '현실세계의 문제를 기술적으로 해결
+                          하고 제품을 생산하는 일' 이 주요 핵심이다. 공학의 본질적인 이야
+                          기를 관통한다. 다만, 이 글의 제목이 '어떤 사람이 코딩을 잘할까?
+                          ' 인 만큼 개발보다는 코딩에 초점을 맞춰보고자 한다. 나는 다른 글
+                          에서는 흥미와 적성, 마인드셋, 대외활동 등 조금은 다른 이야기들을
+                           많이했었는데, 이 글에서는 개인의 능력에 대해 이야기해보고자 한다.
+                          사람은 저마다 가지고 있는 능력이 다른데, 코딩의 세계에서 재능이란,
+                           능력이란 도대체 무엇일까? 단순하게 엉덩이가 무거운 것이 코딩을 
+                           잘하는 비결이라고 하는 사람도 있었는데, 과거에는 나도 그렇게 생각
+                           했지만, 이제는 아니다. 이는 내가 코딩을 하면서 의자에 앉아있던 시
+                           간, 또한 과거에 음악대학을 가겠다고 피아노를 수년
+                        </p>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#" class="thumbnail">
+                        <img src="/image/123.jpg">
+                      </a>
+                      <div class="description">
+                        <a href="#">컴퓨터</a>
+                        <h2>
+                          <a href="#" class="title-sum">컴퓨터 사양 확인 방법</a>
+                        </h2>
+                        <time class="clock">
+                          2023.05.01
+                        </time>
+                        <p class="content-sum">
+                          HTML과 CSS로 만들어진 웹 페이지에 생동감을 불어넣기 위해 만들어진
+                            객체기반의 스크립트 프로그래밍 언어 따로 C, C++처럼 컴파일 없이 한줄 한줄 
+                            해석하며 바로 명령어를 실행하는 인터프리터 언어 HTML의....
+                        </p>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#" class="thumbnail">
+                        <img src="/image/123.jpg">
+                      </a>
+                      <div class="description">
+                        <a href="#">웹</a>
+                        <h2>
+                          <a href="#" class="title-sum">글 쓰기(toast ui) 가져오기</a>
+                        </h2>
+                        <time class="clock">
+                          2022.05.01
+                        </time>
+                        <p class="content-sum">
+                          글쓰기 게시판 작성
+                          썸머노트로 할려고 했으나 깔끔한 ui 찾다가 익현이 형이 올린 오픈소스 toast ui의 글을 참고
+                          toast ui의 글을 보니 react로 설명된 글이 많음 바닐라 스크립트로 설명된글이 거의 없음 -> react 학습후 제대로 수정할 예정
+                          npm i '@toast-ui/react-editor' npm방식으로 인스톨 하지 않고
+                          cdn을 통한 방식으로 했다.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#" class="thumbnail">
+                        <img src="/image/123.jpg" >
+                      </a>
+                      <div class="description">
+                        <a href="#">언어</a>
+                        <h2>
+                          <a href="#" class="title-sum">javascript에 대하여..</a>
+                        </h2>
+                        <time class="clock">
+                          2021.05.01
+                        </time>
+                        <p class="content-sum">
+                          HTML과 CSS로 만들어진 웹 페이지에 생동감을 불어넣기 위해 만들어진
+                            객체기반의 스크립트 프로그래밍 언어 따로 C, C++처럼 컴파일 없이 한줄 한줄 
+                            해석하며 바로 명령어를 실행하는 인터프리터 언어 HTML의....
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+                
+            </div>
+            
+            <aside id="aisdeRight">
+              <div id='scroll-to-top'>
+                <span class='fa-stack fa-lg'>
+                    <i class='fa fa-circle fa-stack-2x circle'></i>
+                    <i class='fa fa-angle-double-up fa-stack-1x fa-inverse up-arrow'></i>
+                </span>
+            </div>
+            </aside>
+        </div>
+    </main>
+    
+  </section>
+</body>
+<script type="text/javascript" src="/js/index.js">
+  
+</script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>방명록</title>
+  <style>
+    /* CSS 스타일 코드 */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>방명록</h1>
+
+    <div id="guestbookSection">
+      <h2>방명록 작성</h2>
+      <form id="guestbookForm">
+        <div class="form-group">
+          <label for="name">이름:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="message">메시지:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">전송</button>
+      </form>
+
+      <div id="guestbook"></div>
+    </div>
+  </div>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+
+      var nameInput = document.getElementById("name");
+      var messageInput = document.getElementById("message");
+
+      var date = new Date();
+      var dateString = date.toLocaleString();
+
+      var newEntry = {
+        name: nameInput.value,
+        message: messageInput.value,
+        date: dateString
+      };
+
+      entries.push(newEntry);
+
+      nameInput.value = "";
+      messageInput.value = "";
+
+      updateGuestbook();
+
+      return false;
+    }
+
+    function updateGuestbook() {
+      var guestbookDiv = document.getElementById("guestbook");
+      guestbookDiv.innerHTML = "";
+
+      for (var i = 0; i < entries.length; i++) {
+        var entry = entries[i];
+
+        var entryDiv = document.createElement("div");
+        entryDiv.classList.add("entry");
+
+        var nameElement = document.createElement("div");
+        nameElement.classList.add("name");
+        nameElement.textContent = entry.name;
+
+        var dateElement = document.createElement("div");
+        dateElement.classList.add("date");
+        dateElement.textContent = entry.date;
+
+        var messageElement = document.createElement("div");
+        messageElement.textContent = entry.message;
+
+        entryDiv.appendChild(nameElement);
+        entryDiv.appendChild(dateElement);
+        entryDiv.appendChild(messageElement);
+        guestbookDiv.appendChild(entryDiv);
+      }
+    }
+
+    var entries = [];
+
+    var guestbookForm = document.getElementById("guestbookForm");
+    guestbookForm.addEventListener("submit", submitForm);
+  </script>
+</body>
+</html>
