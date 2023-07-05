@@ -1,0 +1,102 @@
+h1{
+    text-align: center;
+    margin:50px auto 30px;
+}
+
+
+#container{
+	width:600px;
+	margin:0 auto;
+}
+
+#container li{
+    list-style: none;
+}
+
+li{
+    list-style: none;
+}
+ul li {
+    
+	clear:both;
+}
+
+.join_link{
+	text-align: center;
+}
+
+input[type="text"], input[type="password"]{
+	float:left;
+	width: 350px;
+	height:35px;
+	border:1px solid #aaa;
+	border-radius:5px;
+	padding:5px;
+	margin:5px 0;
+	text-indent: 10px;
+}
+
+a{
+    text-decoration: none; 
+    color:black;
+}
+
+#sbutton > li {
+	display:inline-block;
+}
+button {
+	width: 250px;
+	height:50px;
+	margin-top: 30px;
+	border:1px solid #ccc;
+	background:#eee;
+	font-size:0.9em;
+}
+
+footer {
+	color: black;
+    text-align: center;
+	font-size: 1.2rem; 
+	margin-top:30px;
+   }
+
+
+ body #loginfrm ul li .error {
+    margin-top: 10px ;
+    color:#e7223d;
+    text-align: left;
+    display:none;
+    margin-left: 115px;
+}
+#user-info{
+    padding: 0px;
+}
+.field {
+	float:left;
+	width:100px;
+	font-weight:bold;
+	font-size:0.9em;
+	line-height: 55px;
+	text-align:right;
+	margin-right:15px;
+}
+
+div.accordion {
+    margin: 0 auto;
+	width: 600px;
+	height: 116px;
+}
+
+div.accordion li img{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 17px;
+    left: -30px;;
+}
+
+
+#id_error , #pw_error{
+	margin-left: 115px;
+	width: 500px;
+}
