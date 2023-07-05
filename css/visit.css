@@ -7,7 +7,53 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+#comments {
+  margin-top: 20px;
+}
 
+#comment-list {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#comment-form {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.comment-item {
+  margin-bottom: 10px;
+}
+
+.comment-item p {
+  margin: 0;
+}
+
+.comment-item button {
+  margin-left: 10px;
+}
+
+h1, h2 {
+  font-family: Arial, sans-serif;
+}
+
+input, textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#submit-btn {
+  background-color: #959595;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #959595;
+}
 .sidebar .blogmenu li a {
   display: none;
 }
@@ -346,6 +392,16 @@
   font-size: 18px;
   border-radius: 12px;
 }
+
+
+.sidebar .blognickname i {
+  line-height: 24px;
+  font-size: 16px;
+  height: 24px;
+  min-width: 24px;
+}
+
+
 .sidebar li.profile {
   position: fixed;
   height: 80px;
@@ -551,7 +607,7 @@ body, #write_btn, #cancel_btn {
 }
 
 .in_header .btn_search {
-  right: 0px;
+  right: 50px;
   position: absolute;
   display: block;
   width: 40px;
@@ -570,7 +626,10 @@ body, #write_btn, #cancel_btn {
   top: -31px;
   position: relative;
 }
-
+#write_botton {
+  width: 30px;
+  height: 30px;
+}
 .area_search {
   width: 40px;
   height: 40px;
@@ -580,7 +639,7 @@ body, #write_btn, #cancel_btn {
   transition: 0.5s;
   overflow: hidden;
   border: 1px solid #1eb49f;
-  right: 50px;
+  right: 0px;
 }
 .area_search.active {
   width: 400px;
@@ -736,4 +795,29 @@ a {
   border-radius: 100px;
   width: 40px;
   height: 40px;
+}
+
+.home-section #main .in_header .logup{
+  display: none;
+}
+.home-section #main .in_header .logup.show{
+  position: absolute;
+   right: 0px;
+   display: block;
+   top: 80px;
+   border: 1px solid black;
+}
+
+.home-section #main .in_header .inner_write{
+  border-bottom: 1px solid black;
+}
+.home-section #main .in_header .logup{
+  display: none;
+}
+.home-section #main .in_header .logup.show{
+  position: absolute;
+   right: 0px;
+   display: block;
+   top: 80px;
+   border: 1px solid black;
 }

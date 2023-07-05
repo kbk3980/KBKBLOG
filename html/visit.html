@@ -22,7 +22,9 @@
              <img src="/image/123.jpg">
            </div>
            <div class="blognickname">
-            KBK.
+            KBK.<button type="submit" onclick="location.href='write.HTML'"id="write_botton">
+              <i class="fa-solid fa-pen"></i>
+              </button> 
            </div>
            <div class="blogname">
             김배권
@@ -60,18 +62,22 @@
                         <!-- <i class='bx bxs-food-menu'></i> -->
     
                         <span class="links_name">블로그 메뉴 </span>
-                        <a href="#" class="">
-                        <li>
-                          <i class="fa-brands fa-github">&nbsp;&nbsp;github(깃허브)</i>
-                        </li>   
-                        </a>
+                        <a href="https://github.com/kbk3980" target="_blank" class="">
+                          <li>
+                            <i class="fa-brands fa-github">&nbsp;&nbsp;github(깃허브)</i>
+                          </li>   
+                          </a>
                      
                         <li>
-                          <a href="#" class="">
+                          <a href="/html/visit.html" class="">
                           <i class="fa-solid fa-people-group">&nbsp;&nbsp;방명록</i>
                         </a>
                         </li>
-                    
+                        <li>
+                          <a href="/html/board.html" class="">
+                          <i class="fa-solid fa-people-group">&nbsp;&nbsp;커뮤니티</i>
+                        </a>
+                        </li>
                     
                   </li>
                  </div> 
@@ -182,51 +188,59 @@
 
 <section class="home-section">
     <main id="main">   
-        <div class="in_header">
-            <div class="logo">
-                <!--<a href="#"><img src="./KBK.png" alt="내가만든 로고"> -->
-                <h1 class="title-text">KBK</h1>
-                </a>
-            </div>
-         
-            <button id="back-btn"><img src="/image/123.jpg"></button>
-            <div class="btn_search">
-              <div class="area_search">  
-                  <div class="icon">
-                  <i class="search fa fa-search"></i>
-              </div>
-              <div class="input">
-                  <input type="text" placeholder="Search" id="search">
-                  <i class="clear fa fa-times"></i>   
-              </div>
-              </div>
+      <div class="in_header">
+        <div class="logo">
+            <!--<a href="#"><img src="./KBK.png" alt="내가만든 로고"> -->
+            <h1 class="title-text"><a href="/html/index.html"> KBK. </a>
+            </h1>
+            </a>
+        </div>
+     
+        <button id="back-btn">
+          <img src="/image/123.jpg">
+        </button>
+        <div class="logup">
+          <div class="inner_write">
+            <a href="/html/write.html"> 글쓰기 </a>
+          </div>
+          <div class="inner_logout">
+            <a href="/html/login.html"> 로그아웃 </a>
           </div>
         </div>
+        <div class="btn_search">
+          <div class="area_search">  
+              <div class="icon">
+              <i class="search fa fa-search"></i>
+          </div>
+          <div class="input">
+              <input type="text" placeholder="Search" id="search">
+              <i class="clear fa fa-times"></i>   
+          </div>
+          </div>
+      </div>
+    </div>
 
         <div class="in_index">
           
             
-            <aside id="aisdeLeft">             
+         <!--   <aside id="aisdeLeft">             
             </aside>
+            -->
             <div id="section">
                 <div class="container">
                     <h1>방명록</h1>
                 
-                    <div id="guestbookSection">
-                      <h2>방명록 작성</h2>
-                      <form id="guestbookForm">
-                        <div class="form-group">
-                          <label for="name">이름:</label>
-                          <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                          <label for="message">메시지:</label>
-                          <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit">전송</button>
-                      </form>
-                
-                      <div id="guestbook"></div>
+                    <div id="comments">
+                    
+                      
+                      <div id="comment-form">
+                        <input type="text" id="name" placeholder="이름"><br>
+                        <textarea id="comment" placeholder="댓글 내용"></textarea><br>
+                        <button id="submit-btn">댓글 작성</button>
+                      </div>
+                      <div id="comment-list">
+                        <!-- 댓글 목록이 여기에 표시됩니다. -->
+                      </div>
                     </div>
                   </div>
 
@@ -237,7 +251,7 @@
                 
             </div>
             
-            <aside id="aisdeRight">
+          <!--  <aside id="aisdeRight">
               <div id='scroll-to-top'>
                 <span class='fa-stack fa-lg'>
                     <i class='fa fa-circle fa-stack-2x circle'></i>
@@ -245,6 +259,13 @@
                 </span>
             </div>
             </aside>
+            -->
+            <div id='scroll-to-top'>
+              <span class='fa-stack fa-lg'>
+                  <i class='fa fa-circle fa-stack-2x circle'></i>
+                  <i class='fa fa-angle-double-up fa-stack-1x fa-inverse up-arrow'></i>
+              </span>
+          </div>
         </div>
     </main>
     

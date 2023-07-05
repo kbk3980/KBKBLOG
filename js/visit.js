@@ -13,8 +13,95 @@ let neigbtn = document.getElementsByClassName("neig-btn")[0];
   }
 })*/
 
+let logup = document.getElementsByClassName("logup")[0];
 let openlog = document.getElementById("back-btn");
 
+openlog.addEventListener("click",()=>{
+  logup.classList.toggle("show");
+  
+    
+  }
+)
+
+var comments = [];
+
+    function addComment() {
+      var name = document.getElementById("name").value;
+      var comment = document.getElementById("comment").value;
+      
+      var commentList = document.getElementById("comment-list");
+      
+      var newComment = {
+        id: comments.length + 1,
+        name: name,
+        comment: comment
+      };
+      
+      comments.push(newComment);
+      
+      displayComments();
+      
+      // 댓글 작성 후 입력 필드 초기화
+      document.getElementById("name").value = "";
+      document.getElementById("comment").value = "";
+    }
+
+    function displayComments() {
+      var commentList = document.getElementById("comment-list");
+      commentList.innerHTML = "";
+      
+      for (var i = 0; i < comments.length; i++) {
+        var commentItem = document.createElement("div");
+        commentItem.className = "comment-item";
+        
+        var commentText = document.createElement("p");
+        commentText.innerHTML = "<strong>" + comments[i].name + "</strong>: " + comments[i].comment;
+        commentItem.appendChild(commentText);
+        
+        var editButton = document.createElement("button");
+        editButton.innerText = "수정";
+        editButton.setAttribute("data-id", comments[i].id);
+        editButton.onclick = editComment;
+        commentItem.appendChild(editButton);
+        
+        var deleteButton = document.createElement("button");
+        deleteButton.innerText = "삭제";
+        deleteButton.setAttribute("data-id", comments[i].id);
+        deleteButton.onclick = deleteComment;
+        commentItem.appendChild(deleteButton);
+        
+        commentList.appendChild(commentItem);
+      }
+    }
+
+    function editComment() {
+      var commentId = this.getAttribute("data-id");
+      var comment = comments.find(function(item) {
+        return item.id === parseInt(commentId);
+      });
+      
+      var updatedComment = prompt("댓글을 수정하세요.", comment.comment);
+      if (updatedComment !== null) {
+        comment.comment = updatedComment;
+        displayComments();
+      }
+    }
+
+    function deleteComment() {
+      var commentId = this.getAttribute("data-id");
+      var commentIndex = comments.findIndex(function(item) {
+        return item.id === parseInt(commentId);
+      });
+      
+      if (commentIndex !== -1) {
+        comments.splice(commentIndex, 1);
+        displayComments();
+      }
+    }
+
+    document.getElementById("submit-btn").onclick = addComment;
+
+    displayComments();
 
 openlog.addEventListener("click",function(){
   if(sidebar.classList.contains("open")){
@@ -144,11 +231,6 @@ $('.friend-btn').click(function(){
 
 
 
-const backBtn = document.getElementById("back-btn");
-
-backBtn.addEventListener("click", function() {
-  window.history.back();
-});
 
 
 
@@ -267,8 +349,9 @@ function submitForm(event) {
       guestbookDiv.appendChild(entryDiv);
     }
   }
-
+/*
   var entries = [];
 
   var guestbookForm = document.getElementById("guestbookForm");
   guestbookForm.addEventListener("submit", submitForm);
+  */
