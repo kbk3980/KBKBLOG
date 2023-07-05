@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기 페이지</title>
+	<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+</head>
+<body>
+	<h1>글쓰기 페이지</h1>
+    <label for="subject" class="field">제목</label>
+    <input type="text" id="subject" placeholder="5글자 이상을 입력해주세요." required>
+	<div id="editor"></div>
+	<button onclick="seeHtml()">html보기</button>
+	<button onclick="seeMd()">markdown보기</button>
+<div>
+    <button type="submit" id="login_botton">작성</button>
+    <button type="submit" onclick="location.href='/html/index.html' "id="login_botton">취소</button>
+</div>
+<footer>
+   
+</footer>
+	<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+    <script type="text/javascript" src="/js/write.js"></script>
+</body>
+</html>
