@@ -12,19 +12,35 @@ let neigbtn = document.getElementsByClassName("neig-btn")[0];
     
   }
 })*/
-
+let logup = document.getElementsByClassName("logup")[0];
 let openlog = document.getElementById("back-btn");
 
-
-openlog.addEventListener("click",function(){
-  if(sidebar.classList.contains("open")){
-   {
-      cate.classList.toggle("show");
-      down.classList.toggle("rotate");
-    }
+openlog.addEventListener("click",()=>{
+  logup.classList.toggle("show");
+  
+    
   }
+)
+// 스크롤바 내리면 위에 상단바 나타나게 
+const progressBar = document.querySelector('.progressBar');
+const section = document.querySelector('section');
 
-})
+const scrollProgressBar = () => {
+      let scrollDistance = -(section.getBoundingClientRect().top);
+      let progressPercentage =
+                  (scrollDistance /
+                               (section.getBoundingClientRect().height - 
+                               document.documentElement.clientHeight)) * 100;
+
+      let val = Math.floor(progressPercentage);
+      progressBar.style.width = val + '%';
+
+      if (val < 0) {
+                progressBar.style.width = '0%';
+      }
+};
+
+window.addEventListener('scroll', scrollProgressBar);
 
 
 
@@ -144,11 +160,7 @@ $('.friend-btn').click(function(){
 
 
 
-const backBtn = document.getElementById("back-btn");
 
-backBtn.addEventListener("click", function() {
-  window.history.back();
-});
 
 
 

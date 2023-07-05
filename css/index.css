@@ -7,7 +7,38 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
+#write_botton{
+  width: 30px;
+  height: 30px;
+}
+.sidebar .blognickname i {
+  line-height: 24px;
+  font-size: 16px;
+  height: 24px;
+  min-width: 24px;
+}
+.progressBar {
+  position: fixed;
+top: 0;
+height: 2px;
+background: linear-gradient(to right, #959595, black);
+width: 0%;
+  z-index: 100;
+transition: width 0.2s ease-out;
+}
+.home-section #main .in_header .inner_write{
+  border-bottom: 1px solid black;
+}
+.home-section #main .in_header .logup{
+  display: none;
+}
+.home-section #main .in_header .logup.show{
+  position: absolute;
+   right: 0px;
+   display: block;
+   top: 80px;
+   border: 1px solid black;
+}
 .sidebar .blogmenu li a {
   display: none;
 }
@@ -104,15 +135,14 @@
 
 
 
-
+/*
 .thumbnail img{
   width: 200px;
   height: 200px;
-}
-@media (min-width: 600px) {
+}*/
+@media (min-width: 768px) {
   .post {
     height: 18rem;
-    flex-direction: row-reverse;
     align-items: center;
     justify-content: flex-end;
     -moz-column-gap: 1.5rem;
@@ -123,9 +153,20 @@
     border-style: solid;
     border-bottom: 0px;
     border-color: rgb(230 230 233);
-   
+    
+}
+.thumbnail img{
+  width: 200px;
+  height: 200px;
 }
 }
+@media (max-width: 768px) {
+  img{
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .post .description p{
   max-height: 4rem;
   overflow: hidden;
@@ -440,21 +481,23 @@
 
 #aisdeLeft {
   display: block;
-  flex-grow: 0;
-  border: 1px solid red;
+  flex-grow: 1;
+/* border: 1px solid red; */
   min-width: 250px;
 }
 
 #section {
   padding: 20px;
   flex-grow: 1;
-  border: 1px solid blue;
-  width:1100px;
+  border: 1px solid #959595;
+  max-width:1100px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #aisdeRight {
-  flex-grow: 0;
-  border: 1px solid yellow;
+  flex-grow: 1;
+ /* border: 1px solid yellow; */
   min-width: 250px;
 }
 
@@ -550,7 +593,7 @@ body, #write_btn, #cancel_btn {
 }
 
 .in_header .btn_search {
-  right: 0px;
+  right: 50px;
   position: absolute;
   display: block;
   width: 40px;
@@ -579,7 +622,7 @@ body, #write_btn, #cancel_btn {
   transition: 0.5s;
   overflow: hidden;
   border: 1px solid #1eb49f;
-  right: 50px;
+  right: 1px;
 }
 .area_search.active {
   width: 400px;
@@ -666,13 +709,10 @@ body, #write_btn, #cancel_btn {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-  height: 10px;
-}
+
 
 ::-webkit-scrollbar-thumb {
-  background: #fff;
+  background: black;
 }
 
 #main .profile ul li, ul, li {
